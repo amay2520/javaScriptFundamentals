@@ -1,6 +1,3 @@
-console.log('5' - 2);
-console.log(5 -'2');
-console.log(5 + '2');
-console.log('5'+2);
-console.log(5 == '5');
-console.log(5 === "5");
+const fruits = ["banana","apple","mango"];
+let fruitsString = fruits.toString();
+console.log(fruitsString);
