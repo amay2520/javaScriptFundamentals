@@ -6,44 +6,39 @@
 // methods to convert a datatype to either string 
 // using String(), to boolean using Boolean(), 
 // or to number using Number().
-
-const { get } = require("express/lib/response");
-const { stringToBytes } = require("qrcode-generator");
-
 // JavaScript is a loosely typed language and most 
 // of the time JavaScript implicitly converts a value 
 // to the right type but there are also cases when 
 // we need to explicitly do type conversions.
 
 // CASE 1 :
-
-var score = 33;
-console.log(typeof score); // number
-
-// Here we provide number as an input and when we try to 
-// get it's datatype we get number as an output
+    var score = 33;
+    console.log(typeof score); // number
+    // Here we provide number as an input and when we try to 
+    // get it's datatype we get number as an output
+//
 
 // CASE 2 :
-
-var score ="33";
-console.log(typeof(score)); // string
-console.log(score); // "33"
-var score = Number(score);
-console.log(score); //33
-console.log(typeof score);// number
-
-// this is called type conversion in explicit manner
+    var score ="33";
+    console.log(typeof(score)); // string
+    console.log(score); // "33"
+    var score = Number(score);
+    console.log(score); //33
+    console.log(typeof score);// number
+    // this is called type conversion in explicit manner
+//
 
 // CASE 3 : 
 
-var score = "33abc";
-var score = Number(score);
-console.log(typeof score);//number
-console.log(score); // NaN
+    var score = "33abc";
+    var score = Number(score);
+    console.log(typeof score);//number
+    console.log(score); // NaN
 
-// here score is converted into number but abc is string
-// so when we cosole out score we get NaN that is not a number
-// because internally a string containing alphabets doesnot getconverted to numbers
+    // here score is converted into number but abc is string
+    // so when we cosole out score we get NaN that is not a number
+    // because internally a string containing alphabets doesnot getconverted to numbers
+//
 
 // for NaN as score we get NaN
 // for null we get 0

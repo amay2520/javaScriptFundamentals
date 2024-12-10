@@ -1,5 +1,6 @@
 // Object Creation
-// Object Literals:
+
+//1. Object Literals:
 // The simplest way to create an object is using an object literal.
 
 const person = {
@@ -13,7 +14,7 @@ const person = {
 };
 
 
-// Object Constructor:
+//2. Object Constructor:
 // Objects can also be created using the Object constructor.
 
 
