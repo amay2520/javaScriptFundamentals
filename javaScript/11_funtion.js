@@ -41,14 +41,19 @@
   //A concise function syntax introduced in ES6.
   const multiply = (a, b) => a * b;
   console.log(multiply(4, 5)); // Output: 20
+
+  // const multiply = (a,b) => (a*b) // you can write this as well
+  //const user = () => ({}) // here we are returning object, USECASE IS IN REACT
 //
 
 // 5. Immediately Invoked Function Expression (IIFE)
   // A function that runs immediately after it’s defined.
-  (function () {
+  (function sum() {
   console.log("IIFE executed!");
   })();
   // Output: IIFE executed!
+  
+  //for db connections specifically
 //
 
 // 6. Higher-Order Function
