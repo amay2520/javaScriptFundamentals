@@ -104,6 +104,19 @@
             // 1: Banana
             // 2: Cherry
         //
+
+        // 4.3 for...of Loop
+            Syntax:
+            for (element of iterable) {
+              // code to execute
+            }
+
+            Example:                        
+            const array = [10, 20, 30];
+            for (let value of array) {
+              console.log(value);
+            }
+        //
     //
 
     // 5. Manipulating Elements
