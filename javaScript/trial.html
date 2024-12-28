@@ -6,6 +6,49 @@
     <title>DEMO LECTURE</title>
 </head>
 <body>
+    <div id = "container-post"></div>
     
+    <script>
+        const xhr = new XMLHttpRequest();
+
+        // Open a GET request to a server
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+
+        // Define the callback function
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+              const data = JSON.parse(xhr.responseText);
+              const container = document.getElementById('container-post');
+
+              data.forEach((post) => {
+                    // Create a new div for each post
+                    const postDiv = document.createElement("div");
+                    postDiv.style.border = "1px solid #ddd";
+                    postDiv.style.padding = "10px";
+                    postDiv.style.margin = "10px 0";
+
+                    // Create an h2 element for the title
+                    const title = document.createElement("h2");
+                    title.textContent = post.title;
+
+                    // Create a p element for the body
+                    const body = document.createElement("p");
+                    body.textContent = post.body;
+
+                    // Append title and body to the post div
+                    postDiv.appendChild(title);
+                    postDiv.appendChild(body);
+
+                    // Append the post div to the container
+                    container.appendChild(postDiv);
+                });
+
+            } else {
+              console.error("Error:", xhr.status);
+            }
+        };
+        // Send the request
+        xhr.send();
+    </script>
 </body>
 </html>
